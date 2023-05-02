@@ -6,7 +6,8 @@ selectTarget = {selectTarget}
 -- Defaulting to no exceptions
 local exceptBlocks = {exceptBlock} or {"no_exception"}
 
+package.path = "/apisDiaPork/lib/?.lua;" .. package.path
 -- For smart resource extraction
-local dpExtract = require("apisDiaPork.dpExtract")
+local dpExtract = require("dpExtract")
 
 dpExtract.eSurface(selectTarget, exceptBlocks)
